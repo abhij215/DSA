@@ -1,0 +1,25 @@
+What is Sorting?
+----------------
+
+A Sorting Algorithm is used to rearrange a given array or list of elements according to a 
+comparison operator on the elements. The comparison operator is used to decide the new order 
+of elements in the respective data structure.
+
+Quick sort, Merge Sort, Heap Sort - O(nlogn)
+
+Divide And Conquer (DAC)
+This technique can be divided into the following three parts:
+
+Divide: This involves dividing the problem into smaller sub-problems.
+Conquer: Solve sub-problems by calling recursively until solved.
+Combine: Combine the sub-problems to get the final solution of the whole problem.
+
+Quick sort and Merge sort use DAC
+
+Partition Algorithm:
+--------------------
+
+The logic is simple, we start from the leftmost element and keep track of the index of 
+smaller (or equal) elements as i. While traversing, if we find a smaller element, we swap 
+the current element with arr[i]. Otherwise, we ignore the current element.
+
