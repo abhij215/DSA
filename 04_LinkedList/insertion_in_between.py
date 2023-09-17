@@ -50,24 +50,24 @@ class LinkedList:
         return x
 
 
-if __name__ == "__main":
-    list = LinkedList()
-    list.insertAtEnd(1)
-    list.insertAtEnd(2)
-    list.insertAtEnd(3)
-    list.insertAtEnd(4)
+list = LinkedList()
+list.insertAtEnd(1)
+list.insertAtEnd(2)
+list.insertAtEnd(3)
+list.insertAtEnd(4)
+
 
 # Creating New Node
-    newNode = Node(5);    
+newNode = Node(5);    
 # Generating the Address of x'th Node
-    x = list.generateX(2);
+x = list.generateX(2);
 # Storing the Address of y'th Node
-    y = x.next;
+y = x.next;
 
 # Updating the `next` variable of x as newNode
-    x.next = newNode;
+x.next = newNode;
 # Updating the `next` variable of newNode as y
-    newNode.next = y;
+newNode.next = y;
 
 # Printing the Linked List
-    list.print()
+list.print()

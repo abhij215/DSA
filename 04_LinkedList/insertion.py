@@ -31,6 +31,26 @@ class LinkedList:
             temp.next = new_data
             new_data.next = None
     
+    def num(self, index):
+        cur = self.head
+        count = 0
+
+        while cur != None:
+            if count == index:
+                return cur.data
+            count += 1
+            cur = cur.next
+
+    def index(self, data):
+        cur = self.head
+        count = 0
+
+        while cur != None:
+            if cur.data == data:
+                return count
+            count += 1
+            cur = cur.next
+    
 
     def printlist(self):
         temp = self.head
@@ -40,6 +60,7 @@ class LinkedList:
                 temp = temp.next
         else:
             print("not present")
+        print()
 
     def insertarray(self, arr):
         self.head = None
@@ -59,8 +80,11 @@ if __name__ == "__main__":
     arrayList.insertarray(arr)
     arrayList.printlist()
 
-    arrayList.addInbetween(23,30)
-    arrayList.printlist()
+    newlist = LinkedList()
+    newlist.insertAtEnd(10)
+    newlist.insertAtEnd(20)
+
+    newlist.printlist()
 
 
     

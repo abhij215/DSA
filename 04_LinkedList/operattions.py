@@ -14,6 +14,32 @@ class LinkedList:
             new_Data = Node(data)
             new_Data.next = self.head
             self.head = new_Data
+
+    def rotate(self,k):
+        if k == 0:
+            return
+
+        count = 1
+
+        cur = self.head
+
+        while cur:
+            if count == k:
+                break
+            cur = cur.next
+            count += 1
+        
+        kthNode = cur
+
+        while cur.next != None:
+            cur = cur.next
+        
+        cur.next = self.head
+        self.head = kthNode.next
+        kthNode.next = None
+        
+            
+
     
     # to search an element in linkedlist
     def search(self, data):
@@ -64,6 +90,11 @@ if __name__ == "__main__":
     ls.push(30)
     ls.push(40)
     ls.push(50)
+
+    ls.print()
+
+    ls.rotate(3)
+    ls.print()
 
     ls.print()
 

@@ -73,6 +73,35 @@ class LinkedList:
         temp = None
 
 
+
+    def swap(self,x,y):
+        
+        if x == y:
+            return
+        
+        preX = None
+        curX = self.head
+
+        while curX != None:
+            if curX.data == x:
+                break
+            preX = curX
+            curX = curX.next
+        
+        preY = None
+        curY = self.head
+
+        while curY != None:
+            if curY.data == y:
+                break
+            preY = curY
+            curY = curY.next
+        
+        
+
+
+
+
         
    
     
@@ -91,8 +120,7 @@ if __name__ == "__main__":
 
     ls.print()
 
-    ls.deletion(2)
-    ls.print()
+
 
 
 
