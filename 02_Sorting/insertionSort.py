@@ -11,8 +11,6 @@ def insertionSort(arr):
         arr[j+1] = temp
     
 
-
-
 if __name__ == "__main__":
     arr = [6,1,4,3,9,7,5]
     insertionSort(arr)

@@ -3,8 +3,6 @@ def partition(arr, low, high):
    start = low + 1
    end = high
 
-   
-
    while True:
           
       while start <= end and arr[start] <= pivot:
